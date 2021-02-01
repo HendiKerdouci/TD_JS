@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    background-size: cover;
+}
+
+#container{
+    background-color: rgb(162, 168, 170);
+    width: 30%;
+    height: 80vh;
+    border-radius: 5px;
+}
+
+h1{
+    text-align: center;
+    font-size: 3em;
+    text-transform: uppercase;
+    margin: 25px 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    padding-left: 30px;
+    justify-content: space-between;
+    font-size: 1.2em;
+}
+
+.erreurs{
+    display: inline;
+}
+input,
+select{
+    width: 50%;
+    margin-top: 8px;
+    display: block;
+}
+
+.fas{
+    margin-right: 8px;
+}
+
+#btn{
+    width: 40%;
+    height: 40px;
+    color: white;
+    background-color: black;
+    font-size: 1.2em;
+    margin: 0px auto;
+    position: relative;
+    top: 40px;
+}
+
+#btn{
+    display: none;
+}
+
+/*--------------------------------------------------------------------------*/
+
+.error{
+    color: red;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.errorBtn{
+    color: red;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*-----------------------------------------------------------------------------------*/
+
+#resultat{
+    display: none;
+    margin-left: 30px;
+    position: relative;
+    top: 10%;
+    font-size: 2em;
+}
+
+#resultat>div{
+    padding: 5px;
+}
+.resultSpan{
+    color: red;
+    text-transform: uppercase;
+
+}
