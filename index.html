@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Voiture.fr | Occasion</title>
+    <link rel="stylesheet" href="css/eval1.css">
+    <script src="https://kit.fontawesome.com/3c56072dd7.js" crossorigin="anonymous"></script>
+    <script src="scripts/eval1.js"></script>
+</head>
+<body>
+    <section id="container">
+        <h1>Ma Voiture.fr</h1>
+        <form id="formulaire">
+            <div class="champs">
+                <i class="fas fa-car"></i>
+                <label for="marque">Marque :</label>
+                <div id="erreurMarque" class="erreurs"></div>
+                <input type="text" id="marque" placeholder="Veuillez saisir la marque du véhicule" onblur="erreur()">
+            </div>
+            <div class="champs">
+                <i class="fas fa-car"></i>
+                <label for="modele">Modèle :</label>
+                <div id="erreurModele" class="erreurs"></div>
+                <input type="text" id="modele" placeholder="Veuillez saisir la modèle du véhicule" onblur="erreur()">
+            </div>
+            <div class="champs">
+                <i class="fas fa-gas-pump"></i>
+                <label for="type">Type de carburant :</label>
+                <div id="erreurType" class="erreurs"></div>
+                <select name="type" id="type" onchange="erreur()">
+                    <option value="null">type de carburant</option>
+                    <option value="essence">essence</option>
+                    <option value="diesel">diesel</option>
+                </select>
+            </div>
+            <div class="champs">
+                <i class="fas fa-globe-africa"></i>
+                <label for="origine">Origine du véhicule :</label>
+                <div id="erreurOrigine" class="erreurs"></div>
+                <select name="origine" id="origine" onchange="erreur()">
+                    <option value="null">Origine du véhicule</option>
+                    <option value="france">france</option>
+                    <option value="allemagne">allemagne</option>
+                    <option value="italie">italie</option>
+                </select>
+            </div>
+            <div class="champs">
+                <i class="fas fa-road"></i>
+                <label for="nbreKilometre">Nombre de Km :</label>
+                <div id="erreurNbreKilometre" class="erreurs"></div>
+                <input type="number" id="nbreKilometre" placeholder="Veuillez saisir le nombre de kilomètres" onblur="erreur()">
+            </div>
+            <div class="champs">
+                <i class="fas fa-euro-sign"></i>
+                <label for="valeur">Valeur neuve :</label>
+                <div id="erreurValeur" class="erreurs"></div>
+                <input type="number" id="valeur" placeholder="Veuillez saisir la valeur neuve" onblur="erreur()">
+            </div>
+            <div class="champs">
+                <i class="fas fa-tools"></i>
+                <label for="travaux">Travaux à prévoir :</label>
+                <div id="erreurTravaux" class="erreurs"></div>
+                <select name="travaux" id="travaux" onchange="erreur()">
+                    <option value="null"></option>
+                    <option value="oui">oui</option>
+                    <option value="non">non</option>
+                </select>
+            </div>
+            <button type="button" id="btn" onclick="resultat()">Estimer</button>
+            <div id="erreurBtn"></div>
+        </form>
+        <div id="resultat">
+            <div>Marque : <span id="resultMarque" class="resultSpan"></span></div>
+            <div>Modèle : <span id="resultModele" class="resultSpan"></span></div>
+            <div>Type : <span id="resultType" class="resultSpan"></span></div>
+            <div>Origine : <span id="resultOrigine" class="resultSpan"></span></div>
+            <div>Nombre de Km : <span id="resultKm" class="resultSpan"></span></div>
+            <div>Travaux à prévoir : <span id="resultTravaux" class="resultSpan"></span></div>
+            <div>Prix estimé : <span id="resultPrix"></span></div>
+        </div>
+    </section>
+</body>
+</html>
